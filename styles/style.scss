@@ -1,0 +1,312 @@
+
+
+$lightGrey : rgb(139,119,117);
+$lightGrey2 : rgb(241,241,241);
+$black : black;
+$white : white;
+
+$primaryFont : "Montserrat", sans-serif;
+$secondaryFont : "Roboto", sans-serif;
+
+* {
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: $primaryFont;
+    text-decoration: none; 
+}
+
+@mixin bgBlack() {
+    background-color: black;
+    color: white;
+}
+
+@mixin bgWhite() {
+    background-color: white;
+    color: black;
+}
+
+@mixin flex($direction : column, $justify : center, $align : center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin fill() {
+    height: 100%;
+    width: 100%;
+}
+
+@mixin image($img, $size : contain, $position : center) {
+    background: url('../img/' + $img + ".jpg");
+    background-position: $position;
+    background-repeat: no-repeat;
+    background-size: $size; 
+}
+
+body {
+    @include flex(row, flex-start, flex-start);
+
+
+    .menu { 
+        width: 25%;   
+        .bx-x, .header {
+            display: none;
+        } 
+        ul { 
+            position: fixed;
+            @include flex(column, center, flex-start);
+            height: 100%;
+            li a {
+                padding: 20px;
+                color: $lightGrey;
+                font-family: $secondaryFont;
+                font-size: x-large;
+            }
+            .shoes {
+                color: black;
+            }
+
+        }
+    }
+
+    .content {
+        @include fill(); 
+        .title {
+            grid-area: content;
+            @include flex(row, space-between);
+            margin: 0 10px;
+            font-family: $primaryFont;
+            font-size: x-large;
+            z-index: 0;
+            .btns {
+                font-size: 40px;
+                * {
+                    color: black;  
+                    padding: 5px;
+    
+                }  
+            }
+        }
+    
+        .homeBox {
+            grid-area: content;
+            padding: 10px;
+            .home {  
+                @include fill();
+                @include image('portrait3', cover, 35%);
+                @include flex(column, flex-start, flex-end);
+                .text {
+                    margin-top: 10vh;
+                    h1 {
+                        padding: 0 20px 20px 0;
+                    }
+                    a {
+                        text-decoration: none;
+                        @include bgBlack();
+                        text-transform: uppercase;
+                        padding: .6rem 1rem;
+                        font-weight: bold;
+                        margin-top: 10vh; 
+                    }
+        
+                }
+            }
+    
+        }
+    
+        .products {
+            grid-area: content;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            
+            .product {
+                height: 20rem;
+                margin: 10px;
+                // border: 1px solid black;
+                @include flex(column, flex-end, center);
+                .img1 {
+                    @include image('shoe1', cover);
+                    @include fill();
+                } 
+                .img2 {
+                    @include image('shoe2', cover);
+                    @include fill();
+                } 
+                .img3 {
+                    @include image('shoe3', cover);
+                    @include fill();
+                }  
+                .img5 {
+                    @include image('shoe5', cover);
+                    @include fill();
+                } 
+                .img6 {
+                    @include image('shoe6', cover);
+                    @include fill();
+                } 
+                .img7 {
+                    @include image('shoe7', cover);
+                    @include fill();
+                } 
+                .img8 {
+                    @include image('shoe8', cover);
+                    @include fill();
+                } 
+                .img9 {
+                    @include image('shoe9', cover);
+                    @include fill();
+                } 
+                .img10 {
+                    @include image('shoe10', cover);
+                    @include fill();
+                } 
+                .img11 {
+                    @include image('shoe11', cover);
+                    @include fill();
+                } 
+                .img12 {
+                    @include image('shoe12', cover);
+                    @include fill();
+                } 
+                .img13 {
+                    @include image('shoe13', cover);
+                    @include fill();
+                }  
+                .content {  
+                    @include flex(row, center, space-between);
+                    font-family: $primaryFont;
+                    width: 100%; 
+                    padding: 10px 4px;
+                    
+                    .info {
+                        @include flex(column, center, left);
+                        font-weight: 600;
+                        width: 100%; 
+                    }
+                    button {
+                        @include bgBlack();
+                        padding: .3rem 1.2rem;
+                        border: none;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                }
+    
+            }
+        }
+    
+        footer {
+            grid-area: content;
+            background: $lightGrey2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "form about"
+                                "contact about"
+                                "social ...";
+            padding: 1rem;
+            form {
+                grid-area: form;
+                padding: 1rem;
+                @include flex();
+                * {
+                    margin: .25rem;
+                    padding: .8rem .4rem;
+                    @include fill();
+                }
+                input { 
+                    border: 1px solid rgba(0, 0, 0, 0.137);
+                }
+                button {
+                    border: 1px solid rgba(0, 0, 0, 0.137);
+                    @include bgBlack();
+                    text-transform: uppercase;
+                }
+    
+            }
+            .about {
+                grid-area: about;
+                padding: 1rem;
+                @include flex(column, flex-start);
+                .links {
+                    @include flex(column, flex-start, flex-start);
+                    * {
+                        padding: 5px;
+                        color: black;
+                    }
+    
+                }
+            }
+            .contact {
+                grid-area: contact;
+                padding: 1rem;
+            }
+            .social {
+                grid-area: social;
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1150px) {
+
+    header {
+        display: none;
+    }
+}
+
+@media (max-width: 1150px) {
+    header {
+        @include bgBlack();
+        @include flex(row, flex-end, center); 
+        font-size: 4rem;
+        position: fixed;
+        width: 100%; 
+    }
+    .menu {
+        display: none;
+    }
+    .menu.active {
+        display: initial;
+        position: fixed;
+        width: 35vh;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: white;
+        padding: 20px;
+        font-size: xx-large;
+        ul {
+            height: 100%;
+            @include flex(column, center, flex-start); 
+            * {
+                padding-bottom: 15px;
+            }
+            li a {
+                color: $lightGrey;
+            }
+            .shoes {
+                color: black;
+            }
+        }
+        .bx-x {
+            display: initial;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .header {
+
+            align-self: flex-start;
+            @include flex(row, space-between);
+        }
+    }
+    .title {
+        
+        padding-top: 4.5rem;
+    }
+}

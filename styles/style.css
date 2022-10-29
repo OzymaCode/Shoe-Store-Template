@@ -1,0 +1,348 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body .menu {
+  width: 25%;
+}
+body .menu .bx-x, body .menu .header {
+  display: none;
+}
+body .menu ul {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+body .menu ul li a {
+  padding: 20px;
+  color: rgb(139, 119, 117);
+  font-family: "Roboto", sans-serif;
+  font-size: x-large;
+}
+body .menu ul .shoes {
+  color: black;
+}
+body .content {
+  height: 100%;
+  width: 100%;
+}
+body .content .title {
+  grid-area: content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: x-large;
+  z-index: 0;
+}
+body .content .title .btns {
+  font-size: 40px;
+}
+body .content .title .btns * {
+  color: black;
+  padding: 5px;
+}
+body .content .homeBox {
+  grid-area: content;
+  padding: 10px;
+}
+body .content .homeBox .home {
+  height: 100%;
+  width: 100%;
+  background: url("../img/portrait3.jpg");
+  background-position: 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+body .content .homeBox .home .text {
+  margin-top: 10vh;
+}
+body .content .homeBox .home .text h1 {
+  padding: 0 20px 20px 0;
+}
+body .content .homeBox .home .text a {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  margin-top: 10vh;
+}
+body .content .products {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+body .content .products .product {
+  height: 20rem;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+body .content .products .product .img1 {
+  background: url("../img/shoe1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body .content .products .product .img2 {
+  background: url("../img/shoe2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body .content .products .product .img3 {
+  background: url("../img/shoe3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body .content .products .product .img5 {
+  background: url("../img/shoe5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body .content .products .product .img6 {
+  background: url("../img/shoe6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body .content .products .product .img7 {
+  background: url("../img/shoe7.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body .content .products .product .img8 {
+  background: url("../img/shoe8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body .content .products .product .img9 {
+  background: url("../img/shoe9.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body .content .products .product .img10 {
+  background: url("../img/shoe10.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body .content .products .product .img11 {
+  background: url("../img/shoe11.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body .content .products .product .img12 {
+  background: url("../img/shoe12.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body .content .products .product .img13 {
+  background: url("../img/shoe13.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+body .content .products .product .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  padding: 10px 4px;
+}
+body .content .products .product .content .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  font-weight: 600;
+  width: 100%;
+}
+body .content .products .product .content button {
+  background-color: black;
+  color: white;
+  padding: 0.3rem 1.2rem;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body .content footer {
+  grid-area: content;
+  background: rgb(241, 241, 241);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "form about" "contact about" "social ...";
+  padding: 1rem;
+}
+body .content footer form {
+  grid-area: form;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .content footer form * {
+  margin: 0.25rem;
+  padding: 0.8rem 0.4rem;
+  height: 100%;
+  width: 100%;
+}
+body .content footer form input {
+  border: 1px solid rgba(0, 0, 0, 0.137);
+}
+body .content footer form button {
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+}
+body .content footer .about {
+  grid-area: about;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+body .content footer .about .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body .content footer .about .links * {
+  padding: 5px;
+  color: black;
+}
+body .content footer .contact {
+  grid-area: contact;
+  padding: 1rem;
+}
+body .content footer .social {
+  grid-area: social;
+  padding: 1rem;
+}
+
+@media (min-width: 1150px) {
+  header {
+    display: none;
+  }
+}
+@media (max-width: 1150px) {
+  header {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 4rem;
+    position: fixed;
+    width: 100%;
+  }
+  .menu {
+    display: none;
+  }
+  .menu.active {
+    display: initial;
+    position: fixed;
+    width: 35vh;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: white;
+    padding: 20px;
+    font-size: xx-large;
+  }
+  .menu.active ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .menu.active ul * {
+    padding-bottom: 15px;
+  }
+  .menu.active ul li a {
+    color: rgb(139, 119, 117);
+  }
+  .menu.active ul .shoes {
+    color: black;
+  }
+  .menu.active .bx-x {
+    display: initial;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .menu.active .header {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title {
+    padding-top: 4.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
